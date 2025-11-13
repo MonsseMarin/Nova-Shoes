@@ -1,0 +1,34 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Inicio | NOVA Shoes{% endblock %}
+
+{% block content %}
+    <!-- === CARRUSEL === -->
+    <div class="carousel">
+        <img src="{% static 'core/img/banner1.jpeg' %}" alt="Banner principal NOVA Shoes">
+    </div>
+
+    <!-- === SECCIÓN PRODUCTOS === -->
+    <h2 class="section-title">Lo más vendido</h2>
+    <div class="product-grid">
+        <div class="product">
+            <img src="{% static 'core/img/zapatoM.jpg' %}" alt="Zapato mujer">
+            <h4>Zapato Deportivo Mujer</h4>
+            <p>$799 MXN</p>
+            <a href="#" class="buy-btn">Ver Detalles</a>
+        </div>
+        <div class="product">
+            <img src="{% static 'core/img/zapatoH.jpg' %}" alt="Zapato hombre">
+            <h4>Tenis Casual Hombre</h4>
+            <p>$899 MXN</p>
+            <a href="#" class="buy-btn">Ver Detalles</a>
+        </div>
+        <div class="product">
+            <img src="{% static 'core/img/sandaliaN.jpg' %}" alt="Zapato niños">
+            <h4>Sandalias Niña</h4>
+            <p>$499 MXN</p>
+            <a href="#" class="buy-btn">Ver Detalles</a>
+        </div>
+    </div>
+{% endblock %}

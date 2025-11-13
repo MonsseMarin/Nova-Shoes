@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Opiniones | NOVA Shoes{% endblock %}
+
+{% block content %}
+<section class="feedback">
+    <h2 class="section-title">Tu Opinión Nos Importa</h2>
+
+    <form class="feedback-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre">
+
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" rows="5" placeholder="Cuéntanos tu experiencia..."></textarea>
+
+        <label for="puntuacion">Puntuación:</label>
+        <select id="puntuacion">
+            <option value="5">⭐️⭐️⭐️⭐️⭐️ Excelente</option>
+            <option value="4">⭐️⭐️⭐️⭐️ Muy bueno</option>
+            <option value="3">⭐️⭐️⭐️ Regular</option>
+            <option value="2">⭐️⭐️ Malo</option>
+            <option value="1">⭐ Pésimo</option>
+        </select>
+
+        <button type="submit" class="buy-btn">Enviar opinión</button>
+    </form>
+
+    <div class="opiniones">
+        <h3>Últimos comentarios</h3>
+        <div class="opinion">
+            <strong>María P.</strong> ⭐⭐⭐⭐⭐  
+            <p>Excelente calidad y llegó rápido.</p>
+        </div>
+        <div class="opinion">
+            <strong>Carlos M.</strong> ⭐⭐⭐⭐  
+            <p>Los tenis son cómodos y bonitos.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
