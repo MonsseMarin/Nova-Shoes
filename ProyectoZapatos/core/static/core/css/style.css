@@ -1,11 +1,13 @@
-/* === VARIABLES DE COLOR (para consistencia) === */
+/* === VARIABLES DE COLOR (actualizadas según tus indicaciones) === */
 :root {
-    --color-acento: #FF4C4C;
-    --color-acento-hover: #E63E3E;
-    --color-secundario: #003366;
-    --color-fondo: #F8F8F8;
-    --color-texto: #1C1C1C;
-    --color-footer: #1E2A38;
+    --color-promocion: #FF6600;       /* Rojo/naranja para promociones */
+    --color-promocion-hover: #E55B00;
+    --color-boton: #2E8B57;           /* Verde para botones */
+    --color-boton-hover: #256D46;
+    --color-secundario: #003366;      /* Azul oscuro para encabezado o pie */
+    --color-fondo: #F9F9F9;           /* Fondo blanco o gris claro */
+    --color-texto: #1C1C1C;           /* Negro o gris oscuro */
+    --color-footer: #001F33;          /* Azul oscuro / negro */
 }
 
 /* === ESTILOS GLOBALES === */
@@ -18,7 +20,7 @@ body {
 
 /* === HEADER === */
 header {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
@@ -27,17 +29,17 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 3px solid var(--color-acento);
+    border-bottom: 3px solid var(--color-secundario);
 }
 
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--color-texto);
+    color: var(--color-secundario);
 }
 
 .logo span {
-    color: var(--color-acento);
+    color: var(--color-promocion);
 }
 
 nav a {
@@ -56,12 +58,12 @@ nav a::after {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: var(--color-acento);
+    background-color: var(--color-promocion);
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: var(--color-acento);
+    color: var(--color-promocion);
 }
 nav a:hover::after {
     width: 100%;
@@ -80,7 +82,7 @@ nav a:hover::after {
 }
 
 .icons a:hover {
-    color: var(--color-acento);
+    color: var(--color-promocion);
 }
 
 /* === BUSCADOR === */
@@ -99,8 +101,8 @@ nav a:hover::after {
 }
 
 .search-bar input:focus {
-    border-color: var(--color-acento);
-    box-shadow: 0 0 5px rgba(255, 76, 76, 0.3);
+    border-color: var(--color-boton);
+    box-shadow: 0 0 5px rgba(46,139,87,0.3);
 }
 
 /* === CARRUSEL === */
@@ -130,7 +132,7 @@ nav a:hover::after {
     font-size: 1.8rem;
     color: var(--color-secundario);
     font-weight: 600;
-    border-bottom: 3px solid var(--color-acento);
+    border-bottom: 3px solid var(--color-promocion);
     padding-bottom: 6px;
     text-align: center;
 }
@@ -144,7 +146,7 @@ nav a:hover::after {
 }
 
 .product {
-    background-color: #fff;
+    background-color: #FFFFFF;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     padding: 15px;
@@ -158,16 +160,6 @@ nav a:hover::after {
 .product:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-}
-
-.product-image {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* Hace que todas las imágenes sean cuadradas */
-    overflow: hidden;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .product img {
@@ -193,7 +185,7 @@ nav a:hover::after {
 
 .buy-btn {
     display: inline-block;
-    background-color: var(--color-acento);
+    background-color: var(--color-boton);
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
@@ -204,7 +196,7 @@ nav a:hover::after {
 }
 
 .buy-btn:hover {
-    background-color: var(--color-acento-hover);
+    background-color: var(--color-boton-hover);
     transform: translateY(-2px);
 }
 
@@ -235,17 +227,12 @@ nav a:hover::after {
 
 .filter-bar input[type="text"]:focus,
 .filter-bar select:focus {
-    border-color: var(--color-acento);
-    box-shadow: 0 0 4px rgba(255, 76, 76, 0.4);
-}
-
-.filter-bar input[type="text"] {
-    width: 300px;
-    max-width: 70%;
+    border-color: var(--color-boton);
+    box-shadow: 0 0 4px rgba(46,139,87,0.4);
 }
 
 .filter-bar button {
-    background-color: var(--color-acento);
+    background-color: var(--color-boton);
     color: white;
     border: none;
     border-radius: 25px;
@@ -256,20 +243,11 @@ nav a:hover::after {
 }
 
 .filter-bar button:hover {
-    background-color: var(--color-acento-hover);
+    background-color: var(--color-boton-hover);
     transform: translateY(-2px);
 }
 
 /* === FORMULARIOS === */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 90%;
-    max-width: 400px;
-    margin: 20px auto;
-}
-
 form input, form select, form textarea {
     padding: 10px;
     border-radius: 5px;
@@ -278,175 +256,32 @@ form input, form select, form textarea {
 
 form button {
     align-self: center;
-    padding: 10px 20px;
-}
-
-/* === FORMULARIO DE REGISTRO === */
-.registro-form {
-    background-color: #fff;
-    padding: 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-    width: 90%;
-    max-width: 500px;
-    margin: 30px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.registro-form label {
-    font-weight: 500;
-    color: var(--color-texto);
-}
-
-.registro-form input[type="text"],
-.registro-form input[type="email"],
-.registro-form input[type="tel"],
-.registro-form input[type="password"] {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.registro-form input:focus {
-    border-color: var(--color-acento);
-    box-shadow: 0 0 5px rgba(255,76,76,0.3);
-    outline: none;
-}
-
-.form-subtitle {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: var(--color-secundario);
-    text-align: center;
-    font-weight: 600;
-}
-
-.form-description {
-    text-align: center;
-    color: #555;
-    font-size: 0.95rem;
-    margin-bottom: 10px;
-}
-
-/* === ENLACE DE INICIO DE SESIÓN (debajo del registro) === */
-.registro-link {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 0.95rem;
-    color: #555;
-}
-
-.registro-link a {
-    color: var(--color-acento);
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.registro-link a:hover {
-    color: var(--color-acento-hover);
-    text-decoration: underline;
-}
-
-
-/* === ENCUESTA === */
-.encuesta-opciones {
-    display: flex;
-    flex-direction: column; /* Coloca cada opción en una columna */
-    gap: 10px; /* Espacio entre cada opción */
-    margin-top: 15px;
-    margin-bottom: 25px;
-}
-
-.encuesta-opciones label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px 12px;
-    transition: background-color 0.3s, border-color 0.3s;
-    cursor: pointer;
-}
-
-.encuesta-opciones label:hover {
-    background-color: #fff3f3;
-    border-color: var(--color-acento);
-}
-
-.encuesta-opciones input[type="checkbox"] {
-    accent-color: var(--color-acento); /* Hace que el check sea coral */
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
-}
-
-
-/* === TABLA DE CARRITO === */
-.cart-table {
-    width: 90%;
-    margin: 30px auto;
-    border-collapse: collapse;
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.cart-table th, .cart-table td {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #eee;
-}
-
-.remove-btn {
-    background-color: var(--color-acento);
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.remove-btn:hover {
-    background-color: var(--color-acento-hover);
-}
-
-/* === RESUMEN DEL CARRITO === */
-.cart-summary {
-    text-align: right;
-    margin: 30px 5%;
-}
-
-.checkout-btn {
-    background-color: var(--color-acento);
+    background-color: var(--color-boton);
     color: white;
     border: none;
     padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--color-boton-hover);
+}
+
+/* === BOTONES DE ACCIÓN / CARRITO === */
+.remove-btn, .checkout-btn {
+    background-color: var(--color-boton);
+    color: #fff;
+    border: none;
     border-radius: 20px;
+    padding: 8px 16px;
     cursor: pointer;
     font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
-.checkout-btn:hover {
-    background-color: var(--color-acento-hover);
-}
-
-/* === OPINIONES === */
-.opiniones {
-    width: 90%;
-    margin: auto;
-}
-
-.opinion {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+.remove-btn:hover, .checkout-btn:hover {
+    background-color: var(--color-boton-hover);
 }
 
 /* === FOOTER === */
@@ -459,7 +294,7 @@ footer {
 }
 
 footer a {
-    color: var(--color-acento);
+    color: var(--color-promocion);
     text-decoration: none;
 }
 
@@ -468,19 +303,8 @@ footer a:hover {
     text-decoration: underline;
 }
 
-footer .socials {
-    margin-top: 15px;
-}
-
-footer .socials a {
-    margin: 0 10px;
-    color: white;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
 footer .socials a:hover {
-    color: var(--color-acento);
+    color: var(--color-promocion);
 }
 
 /* === RESPONSIVO === */
