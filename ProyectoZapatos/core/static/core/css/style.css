@@ -1,11 +1,21 @@
 /* === VARIABLES DE COLOR (para consistencia) === */
 :root {
-    --color-acento: #FF4C4C;
-    --color-acento-hover: #E63E3E;
-    --color-secundario: #003366;
-    --color-fondo: #F8F8F8;
-    --color-texto: #1C1C1C;
-    --color-footer: #1E2A38;
+      /* Colores base */
+    --color-fondo: #F9FAFB;              /* Fondo blanco/gris claro */
+    --color-texto: #1C1C1C;              /* Texto principal negro grisáceo */
+    
+    /* Colores de acción */
+    --color-boton: #007B5E;              /* Verde azulado para botones */
+    --color-boton-hover: #00664D;        /* Más oscuro al pasar el mouse */
+    
+    /* Colores de promociones */
+    --color-acento: #FF6B35;             /* Naranja para promociones/ofertas */
+    --color-acento-hover: #E65E2E;       /* Naranja oscuro al hover */
+    
+    /* Encabezado y pie de página */
+    --color-header: #0A1F44;             /* Azul oscuro elegante */
+    --color-footer: #0A1F44; 
+    
 }
 
 /* === ESTILOS GLOBALES === */
@@ -18,7 +28,8 @@ body {
 
 /* === HEADER === */
 header {
-    background-color: #ffffff;
+    background-color: var(--color-header);
+    color:#FFFFFF;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
@@ -33,7 +44,7 @@ header {
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--color-texto);
+    color: #FFFFFF;
 }
 
 .logo span {
@@ -42,7 +53,7 @@ header {
 
 nav a {
     text-decoration: none;
-    color: var(--color-texto);
+    color: #FFFFFF;
     margin: 0 15px;
     font-weight: 500;
     position: relative;
@@ -72,9 +83,11 @@ nav a:hover::after {
     gap: 15px;
 }
 
+/* === ICONOS DEL HEADER === */
+
 .icons a {
     text-decoration: none;
-    color: var(--color-texto);
+    color:  #FFFFFF;
     font-size: 1.2rem;
     transition: color 0.3s;
 }
@@ -82,6 +95,58 @@ nav a:hover::after {
 .icons a:hover {
     color: var(--color-acento);
 }
+
+
+/* === BOTONES DE ACCIÓN === */
+.buy-btn,
+.filter-bar button,
+.checkout-btn {
+    background-color: var(--color-boton);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.buy-btn:hover,
+.filter-bar button:hover,
+.checkout-btn:hover {
+    background-color: var(--color-boton-hover);
+    transform: translateY(-2px);
+}
+
+/* === PROMOCIONES O OFERTAS === */
+.promo-banner, .highlight {
+    background-color: var(--color-acento);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* === FOOTER === */
+footer {
+    background-color: var(--color-footer);
+    color: #FFFFFF;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer a {
+    color: var(--color-acento);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
 
 /* === BUSCADOR === */
 .search-bar {
